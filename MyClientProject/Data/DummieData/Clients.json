@@ -1,0 +1,279 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Pieter Janssen",
+    "Age": 34,
+    "City": "Amsterdam",
+    "Country": "Nederland",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 5,
+      "TotalOrders": 8,
+      "TotalSpent": 450.30,
+      "LastPurchaseDate": "2025-04-15T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Pieter Janssen",
+          "Street": "Keizersgracht 123",
+          "City": "Amsterdam",
+          "StateOrProvince": "Noord-Holland",
+          "PostalCode": "1015AB",
+          "Country": "Nederland",
+          "PhoneNumber": "020-1234567"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 2,
+    "Name": "Marieke de Vries",
+    "Age": 29,
+    "City": "Rotterdam",
+    "Country": "Nederland",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 20,
+      "TotalOrders": 25,
+      "TotalSpent": 3200.75,
+      "LastPurchaseDate": "2025-05-30T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Marieke de Vries",
+          "Street": "Laan van Meerdervoort 100",
+          "City": "Den Haag",
+          "StateOrProvince": "Zuid-Holland",
+          "PostalCode": "2517AN",
+          "Country": "Nederland",
+          "PhoneNumber": "070-1234567"
+        },
+        {
+          "RecipientName": "Marieke de Vries - Werk",
+          "Street": "Stationsplein 1",
+          "City": "Rotterdam",
+          "StateOrProvince": "Zuid-Holland",
+          "PostalCode": "3013AJ",
+          "Country": "Nederland",
+          "PhoneNumber": "010-7654321"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "Sander Kok",
+    "Age": 41,
+    "City": "Utrecht",
+    "Country": "Nederland",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 7,
+      "TotalOrders": 15,
+      "TotalSpent": 1500.00,
+      "LastPurchaseDate": "2025-06-10T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Sander Kok",
+          "Street": "Domplein 5",
+          "City": "Utrecht",
+          "StateOrProvince": "Utrecht",
+          "PostalCode": "3512AB",
+          "Country": "Nederland",
+          "PhoneNumber": "030-9988776"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 4,
+    "Name": "Laura Visser",
+    "Age": 27,
+    "City": "Eindhoven",
+    "Country": "Nederland",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 12,
+      "TotalOrders": 20,
+      "TotalSpent": 2750.50,
+      "LastPurchaseDate": "2025-05-25T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Laura Visser",
+          "Street": "Stationsweg 10",
+          "City": "Eindhoven",
+          "StateOrProvince": "Noord-Brabant",
+          "PostalCode": "5611CD",
+          "Country": "Nederland",
+          "PhoneNumber": "040-1122334"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 5,
+    "Name": "Tom de Groot",
+    "Age": 36,
+    "City": "Groningen",
+    "Country": "Nederland",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 8,
+      "TotalOrders": 10,
+      "TotalSpent": 980.40,
+      "LastPurchaseDate": "2025-06-01T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Tom de Groot",
+          "Street": "Vismarkt 7",
+          "City": "Groningen",
+          "StateOrProvince": "Groningen",
+          "PostalCode": "9711LM",
+          "Country": "Nederland",
+          "PhoneNumber": "050-2233445"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 6,
+    "Name": "Eva Jansen",
+    "Age": 32,
+    "City": "Antwerpen",
+    "Country": "België",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 18,
+      "TotalOrders": 30,
+      "TotalSpent": 4300.90,
+      "LastPurchaseDate": "2025-06-15T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Eva Jansen",
+          "Street": "Meir 50",
+          "City": "Antwerpen",
+          "StateOrProvince": "Antwerpen",
+          "PostalCode": "2000",
+          "Country": "België",
+          "PhoneNumber": "+32 3 123 4567"
+        },
+        {
+          "RecipientName": "Eva Jansen - Werk",
+          "Street": "Kammenstraat 7",
+          "City": "Antwerpen",
+          "StateOrProvince": "Antwerpen",
+          "PostalCode": "2000",
+          "Country": "België",
+          "PhoneNumber": "+32 3 765 4321"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 7,
+    "Name": "Jeroen van Dam",
+    "Age": 45,
+    "City": "Gent",
+    "Country": "België",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 6,
+      "TotalOrders": 18,
+      "TotalSpent": 1600.75,
+      "LastPurchaseDate": "2025-04-28T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Jeroen van Dam",
+          "Street": "Korenmarkt 12",
+          "City": "Gent",
+          "StateOrProvince": "Oost-Vlaanderen",
+          "PostalCode": "9000",
+          "Country": "België",
+          "PhoneNumber": "+32 9 123 4567"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 8,
+    "Name": "Sophie Bakker",
+    "Age": 26,
+    "City": "Brussel",
+    "Country": "België",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 14,
+      "TotalOrders": 22,
+      "TotalSpent": 2900.60,
+      "LastPurchaseDate": "2025-06-05T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Sophie Bakker",
+          "Street": "Grote Markt 1",
+          "City": "Brussel",
+          "StateOrProvince": "Brussels Hoofdstedelijk Gewest",
+          "PostalCode": "1000",
+          "Country": "België",
+          "PhoneNumber": "+32 2 234 5678"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 9,
+    "Name": "Mark de Boer",
+    "Age": 39,
+    "City": "Leuven",
+    "Country": "België",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 9,
+      "TotalOrders": 14,
+      "TotalSpent": 1200.00,
+      "LastPurchaseDate": "2025-05-12T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Mark de Boer",
+          "Street": "Bondgenotenlaan 3",
+          "City": "Leuven",
+          "StateOrProvince": "Vlaams-Brabant",
+          "PostalCode": "3000",
+          "Country": "België",
+          "PhoneNumber": "+32 16 123 456"
+        }
+      ]
+    }
+  },
+  {
+    "Id": 10,
+    "Name": "Anouk Vermeulen",
+    "Age": 31,
+    "City": "Brugge",
+    "Country": "België",
+    "Role": "Client",
+    "UserData": {
+      "Discount": 16,
+      "TotalOrders": 27,
+      "TotalSpent": 3400.80,
+      "LastPurchaseDate": "2025-06-02T00:00:00",
+      "ShippingAddresses": [
+        {
+          "RecipientName": "Anouk Vermeulen",
+          "Street": "Dweersstraat 10",
+          "City": "Brugge",
+          "StateOrProvince": "West-Vlaanderen",
+          "PostalCode": "8000",
+          "Country": "België",
+          "PhoneNumber": "+32 50 123 456"
+        },
+        {
+          "RecipientName": "Anouk Vermeulen - Vakantiehuis",
+          "Street": "Kustlaan 25",
+          "City": "Knokke-Heist",
+          "StateOrProvince": "West-Vlaanderen",
+          "PostalCode": "8300",
+          "Country": "België",
+          "PhoneNumber": "+32 50 987 654"
+        }
+      ]
+    }
+  }
+]

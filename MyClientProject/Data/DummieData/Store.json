@@ -1,0 +1,22 @@
+﻿[
+  {
+    "StoreCode": 1,
+    "RecipientName": "Store Amsterdam",
+    "Street": "Dorpsstraat 12",
+    "City": "Amsterdam",
+    "StateOrProvince": "Noord-Holland",
+    "PostalCode": "1011AB",
+    "Country": "Nederland",
+    "PhoneNumber": "020-1234567"
+  },
+  {
+    "StoreCode":  2,
+    "RecipientName": "Store Antwerpen",
+    "Street": "Meir 13",
+    "City": "Antwerpen",
+    "StateOrProvince": "Antwerpen",
+    "PostalCode": "2000",
+    "Country": "Belgie",
+    "PhoneNumber": "03-6000000"
+  }
+]

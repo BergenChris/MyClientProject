@@ -1,0 +1,31 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Laura Spencer",
+    "Age": 45,
+    "City": "New York",
+    "Country": "USA",
+    "Role": "employer",
+    "UserData": {
+      "YearsInBusiness": 12,
+      "Salary": 2800,
+      "Schedule": 3,
+      "StoreCode": 1
+
+    }
+  },
+  {
+    "Id": 2,
+    "Name": "Marcus Reed",
+    "Age": 50,
+    "City": "Chicago",
+    "Country": "USA",
+    "Role": "employer",
+    "UserData": {
+      "YearsInBusiness": 18,
+      "Salary": 4200,
+      "Schedule": 5,
+      "StoreCode": 2
+    }
+  }
+]

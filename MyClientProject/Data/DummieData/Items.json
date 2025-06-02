@@ -1,0 +1,82 @@
+﻿[
+  {
+    "Id": 1,
+    "Category": "Electronics",
+    "Name": "Wireless Headphones",
+    "Price": 99.99,
+    "Weight": 0.25,
+    "DeliveryDays": 3,
+    "Description": "High-quality wireless headphones with noise cancellation.",
+    "StockQuantity": 150
+  },
+  {
+    "Id": 2,
+    "Category": "Electronics",
+    "Name": "Smartwatch",
+    "Price": 199.50,
+    "Weight": 0.10,
+    "DeliveryDays": 4,
+    "Description": "Smartwatch with fitness tracking and notifications.",
+    "StockQuantity": 75
+  },
+  {
+    "Id": 3,
+    "Category": "Home & Kitchen",
+    "Name": "Blender",
+    "Price": 59.99,
+    "Weight": 3.5,
+    "DeliveryDays": 5,
+    "Description": "Powerful blender for smoothies and soups.",
+    "StockQuantity": 60
+  },
+  {
+    "Id": 4,
+    "Category": "Home & Kitchen",
+    "Name": "Air Fryer",
+    "Price": 129.95,
+    "Weight": 4.2,
+    "DeliveryDays": 4,
+    "Description": "Healthy cooking with little to no oil.",
+    "StockQuantity": 40
+  },
+  {
+    "Id": 5,
+    "Category": "Books",
+    "Name": "C# Programming Guide",
+    "Price": 39.99,
+    "Weight": 0.75,
+    "DeliveryDays": 2,
+    "Description": "Comprehensive guide to C# programming.",
+    "StockQuantity": 200
+  },
+  {
+    "Id": 6,
+    "Category": "Books",
+    "Name": "Mystery Novel",
+    "Price": 14.95,
+    "Weight": 0.50,
+    "DeliveryDays": 3,
+    "Description": "A thrilling mystery story.",
+    "StockQuantity": 120
+  },
+  {
+    "Id": 7,
+    "Category": "Clothing",
+    "Name": "Men's T-Shirt",
+    "Price": 19.99,
+    "Weight": 0.3,
+    "DeliveryDays": 5,
+    "Description": "Comfortable cotton t-shirt.",
+    "StockQuantity": 180
+  },
+  {
+    "Id": 8,
+    "Category": "Clothing",
+    "Name": "Women's Jeans",
+    "Price": 49.99,
+    "Weight": 0.8,
+    "DeliveryDays": 6,
+    "Description": "Stylish and durable denim jeans.",
+    "StockQuantity": 95
+  }
+]
