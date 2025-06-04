@@ -1,9 +1,12 @@
-﻿namespace MyClientProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MyClientProject.Models
 {
     public class Store
     {
-        public int StoreCode { get; set; }
+        [Key]
+        public int StoreId { get; set; }
 
-        public ShippingAdress ShippingAdress { get; set; }
+        public required List<ShippingAdress> ShippingAdresses { get; set; }
     }
 }

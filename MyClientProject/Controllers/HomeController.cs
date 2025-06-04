@@ -18,7 +18,7 @@ namespace MyClientProject.Controllers
             return View();
         }
 
-        []
+      
 
         public IActionResult Privacy()
         {

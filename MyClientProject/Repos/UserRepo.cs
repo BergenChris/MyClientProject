@@ -1,5 +1,7 @@
-﻿using MyClientProject.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MyClientProject.Data;
 using MyClientProject.Models;
+using MyClientProject.Repos.Interfaces;
 
 namespace MyClientProject.Repos
 {
@@ -14,12 +16,18 @@ namespace MyClientProject.Repos
 
         public User? Get(int id)
         {
-            return context.Users.FirstOrDefault(x=>x.Id == id);
+            return context.Users.FirstOrDefault(x=>x.UserId == id);
         }
 
         public IEnumerable<User> GetAll()
         {
             return context.Users;
+        }
+
+        public async Task<List<Item>> GetShoppingListFromUser(int id)
+        {
+            var user = await context.Users.Include(x => x.ShoppingList).FirstOrDefaultAsync(x => x.UserId == id);
+            return user?.ShoppingList ?? new List<Item>();
         }
     }
 }

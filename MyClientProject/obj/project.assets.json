@@ -533,7 +533,7 @@
           "Mono.TextTemplating": "2.2.1"
         },
         "compile": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
@@ -4447,6 +4447,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.16",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.16",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.16",
+      "Microsoft.EntityFrameworkCore.Design >= 8.0.16",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.16"
     ]
@@ -4508,6 +4509,12 @@
             "target": "Package",
             "version": "[8.0.16, )"
           },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.16, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[8.0.16, )"
@@ -4536,7 +4543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

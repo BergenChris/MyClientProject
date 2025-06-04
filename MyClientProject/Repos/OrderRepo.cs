@@ -1,6 +1,7 @@
 ﻿using Microsoft.Identity.Client;
 using MyClientProject.Data;
 using MyClientProject.Models;
+using MyClientProject.Repos.Interfaces;
 
 namespace MyClientProject.Repos
 {
@@ -15,12 +16,12 @@ namespace MyClientProject.Repos
 
         public Order? Get(int id)
         {
-            return context.Orders.FirstOrDefault(x => x.Id == id);
+            return context.Orders.FirstOrDefault(x => x.OrderId == id);
         }
 
         public IEnumerable<Order> GetAllFromUser(int id)
         {
-            return context.Orders.Where(x => x.User.Id == id).ToList(); ;
+            return context.Orders.Where(x => x.UserId == id).ToList(); ;
         }
     }
 }

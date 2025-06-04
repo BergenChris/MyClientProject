@@ -1,5 +1,6 @@
 ﻿using MyClientProject.Data;
 using MyClientProject.Models;
+using MyClientProject.Repos.Interfaces;
 
 namespace MyClientProject.Repos
 {
@@ -14,12 +15,12 @@ namespace MyClientProject.Repos
 
         public Item? Get(int id)
         {
-            return context.
+            return context.Items.FirstOrDefault(x => x.ItemId == id);
         }
 
         IEnumerable<Item> IItemRepo.GetAll()
         {
-            throw new NotImplementedException();
+            return context.Items;
         }
     }
 }
