@@ -1,0 +1,7 @@
+online winkel
+
+3 soorten profielen, gast, klant en werknemen met elk eigen kortingen
+
+database met zowel verscheidene data
+
+online shop maken met afrekensysteem
