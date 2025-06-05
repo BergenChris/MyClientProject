@@ -5,8 +5,8 @@ namespace MyClientProject.Models
 {
     public class Employer : User
     {
-       
-        public int Discount { get; set; } = 40;
+
+      
         public int EmployerDataId { get; set; }
         public int YearsInBusiness { get; set; }
         public decimal Salary { get; set; }

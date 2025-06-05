@@ -1,6 +1,7 @@
 ﻿[
   {
-    "Name": "Anna Bakker",
+    "Name": "Anna Baker",
+    "UserEmail": "Annabaker@app.be",
     "Age": 30,
     "City": "Amsterdam",
     "Country": "Nederland",
@@ -23,6 +24,7 @@
   },
   {
     "Name": "Lucas Jansen",
+    "UserEmail": "LucasJansen@app.be",
     "Age": 45,
     "City": "Rotterdam",
     "Country": "Nederland",
@@ -54,6 +56,7 @@
   },
   {
     "Name": "Marie Dupont",
+    "UserEmail": "MarieDupont@app.be",
     "Age": 34,
     "City": "Brussel",
     "Country": "België",
@@ -76,6 +79,7 @@
   },
   {
     "Name": "Jan Peeters",
+    "UserEmail": "JanPeeters@app.be",
     "Age": 40,
     "City": "Antwerpen",
     "Country": "België",
@@ -98,6 +102,7 @@
   },
   {
     "Name": "Sofie Vermeulen",
+    "UserEmail": "SofieVermeulen@app.be",
     "Age": 29,
     "City": "Gent",
     "Country": "België",
@@ -120,6 +125,7 @@
   },
   {
     "Name": "Thomas Lambert",
+    "UserEmail": "ThomasLambert@app.be",
     "Age": 38,
     "City": "Leuven",
     "Country": "België",

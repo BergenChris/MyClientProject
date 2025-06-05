@@ -8,6 +8,10 @@ namespace MyClientProject.Models
     {
         [Key]
         public int UserId { get; set; }
+      
+        [EmailAddress]
+        public string UserEmail { get; set; } = string.Empty;
+  
         public string Name { get; set; } = string.Empty;
         public int Age { get; set; }
         public string City { get; set; } = string.Empty;
@@ -18,7 +22,7 @@ namespace MyClientProject.Models
         public decimal TotalSpent { get; set; }
         public DateTime LastPurchaseDate { get; set; }
 
-        public List<ShippingAdress> ShippingAdresses { get; set; } = null!;
+        public List<ShippingAdress>? ShippingAdresses { get; set; } 
 
         public  List<Item>? ShoppingList { get; set; }
     

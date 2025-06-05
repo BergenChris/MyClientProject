@@ -18,7 +18,7 @@ namespace MyClientProject.Repos
             return context.Items.FirstOrDefault(x => x.ItemId == id);
         }
 
-        IEnumerable<Item> IItemRepo.GetAll()
+        public IEnumerable<Item> GetAll()
         {
             return context.Items;
         }

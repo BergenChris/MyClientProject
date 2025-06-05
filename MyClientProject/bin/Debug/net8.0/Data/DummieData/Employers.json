@@ -1,20 +1,23 @@
 ﻿[
   {
     "Name": "Laura Spencer",
+    "UserEmail": "LauraSpencer@shop.be",
     "Age": 45,
     "City": "New York",
     "Country": "USA",
     "Role": "Employer",
-    "EmployerDataId":1,
+    "EmployerDataId": 1,
     "YearsInBusiness": 8,
-    "Salary":2600,
+    "Salary": 2600,
     "Schedule": 4,
-    "StoreCode": 1
-  
+    "StoreCode": 1,
+    "Discount": 40
+
   },
   {
 
     "Name": "Marcus Reed",
+    "UserEmail": "MarcusReed@shop.be",
     "Age": 50,
     "City": "Chicago",
     "Country": "USA",
@@ -23,6 +26,7 @@
     "YearsInBusiness": 12,
     "Salary": 3600,
     "Schedule": 5,
-    "StoreCode": 2
+    "StoreCode": 2,
+    "Discount": 45
   }
 ]

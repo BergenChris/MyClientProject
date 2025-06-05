@@ -1,0 +1,31 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Welkom";
+    var item = ViewBag.Item as MyClientProject.Models.Item;
+}
+
+
+<h3>Edit @item.Name by @Model.Name</h3>
+
+                <form asp-controller="Klant" asp-action="Edit" method="post" class="mt-2">
+                    <input type="hidden" name="ItemId" value="@item.ItemId" />
+
+                    <div class="mb-1">
+                        <label>Naam:</label>
+                        <input type="text" name="Name" value="@item.Name" class="form-control" />
+                    </div>
+                    <div class="mb-1">
+                        <label>Prijs:</label>
+                        <input type="number" step="0.01" name="Price" value="@item.Price" class="form-control" />
+                    </div>
+                    <div class="mb-1">
+                        <label>Voorraad:</label>
+                        <input type="number" name="StockQuantity" value="@item.StockQuantity" class="form-control" />
+                    </div>
+                    <div class="mb-1">
+                        <label>Beschrijving:</label>
+                        <textarea name="Description" class="form-control">@item.Description</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary">Pas aan</button>
+                </form>
