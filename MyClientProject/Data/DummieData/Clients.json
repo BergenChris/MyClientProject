@@ -20,7 +20,8 @@
         "Country": "Nederland",
         "PhoneNumber": "020-1234567"
       }
-    ]
+    ],
+    "ShoppingList": []
   },
   {
     "Name": "Lucas Jansen",
@@ -52,7 +53,8 @@
         "Country": "Belgie",
         "PhoneNumber": "010-9876543"
       }
-    ]
+    ],
+    "ShoppingList": []
   },
   {
     "Name": "Marie Dupont",
@@ -75,7 +77,8 @@
         "Country": "België",
         "PhoneNumber": "+32 2 123 4567"
       }
-    ]
+    ],
+    "ShoppingList": []
   },
   {
     "Name": "Jan Peeters",
@@ -98,7 +101,8 @@
         "Country": "België",
         "PhoneNumber": "+32 3 987 6543"
       }
-    ]
+    ],
+    "ShoppingList": []
   },
   {
     "Name": "Sofie Vermeulen",
@@ -121,7 +125,8 @@
         "Country": "België",
         "PhoneNumber": "+32 9 123 4567"
       }
-    ]
+    ],
+    "ShoppingList": []
   },
   {
     "Name": "Thomas Lambert",
@@ -144,6 +149,7 @@
         "Country": "België",
         "PhoneNumber": "+32 16 765 4321"
       }
-    ]
+    ],
+    "ShoppingList": [1,2]
   }
 ]

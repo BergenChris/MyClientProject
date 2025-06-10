@@ -24,7 +24,7 @@ namespace MyClientProject.Models
 
         public List<ShippingAdress>? ShippingAdresses { get; set; } 
 
-        public  List<Item>? ShoppingList { get; set; }
+        public  List<int>? ShoppingList { get; set; }
     
     }
 

@@ -4,7 +4,7 @@ namespace MyClientProject.Repos.Interfaces
 {
     public interface IUserRepo
     {
-        User? Get(int id);
+        Task<User> GetUserByIdAsync(int userId);
         IEnumerable<User> GetAll();
 
         Task<List<Item>> GetShoppingListFromUser(int id);

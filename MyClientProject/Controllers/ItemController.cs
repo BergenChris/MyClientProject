@@ -35,7 +35,7 @@ namespace MyClientProject.Controllers
             User();
             if (_user != null)
             {
-                ViewBag.Item = _itemRepo.Get(id);
+                ViewBag.Item = _itemRepo.GetAsync(id);
                 return View("item",_user);
             }
             else

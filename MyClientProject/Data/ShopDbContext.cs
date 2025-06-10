@@ -43,11 +43,7 @@ namespace MyClientProject.Data
                 .HasForeignKey(sa => sa.StoreId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            
-
-            
-
-            
+       
 
             base.OnModelCreating(modelBuilder);
         }

@@ -7,27 +7,47 @@ namespace MyClientProject.Repos
 {
     public class UserRepo : IUserRepo
     {
-        private readonly ShopDbContext context;
+        private readonly ShopDbContext _context;
 
         public UserRepo(ShopDbContext context)
         {
-            this.context = context;
+            this._context = context;
         }
 
-        public User? Get(int id)
+        public async Task<User> GetUserByIdAsync(int userId)
         {
-            return context.Users.FirstOrDefault(x=>x.UserId == id);
+            return await _context.Users.FindAsync(userId);
+        }
+
+        public async Task UpdateUserAsync(User user)
+        {
+            _context.Users.Update(user);
+        }
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
 
         public IEnumerable<User> GetAll()
         {
-            return context.Users;
+            return _context.Users;
         }
 
-        public async Task<List<Item>> GetShoppingListFromUser(int id)
+        public async Task<List<Item>> GetShoppingListFromUser(int userId)
         {
-            var user = await context.Users.Include(x => x.ShoppingList).FirstOrDefaultAsync(x => x.UserId == id);
-            return user?.ShoppingList ?? new List<Item>();
+            
+
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserId == userId);
+            if (user == null || user.ShoppingList == null || !user.ShoppingList.Any())
+                return new List<Item>();
+
+            var shoppingListIds = user.ShoppingList;
+
+            var shoppingItems = await _context.Items
+                .Where(item => shoppingListIds.Contains(item.ItemId))
+                .ToListAsync();
+
+            return shoppingItems;
         }
     }
 }

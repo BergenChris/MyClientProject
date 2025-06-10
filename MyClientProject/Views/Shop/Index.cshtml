@@ -1,0 +1,39 @@
+﻿@model List<Item>
+
+@{
+    ViewData["Title"] = "Welkom";
+    var user = ViewBag.user as MyClientProject.Models.User;
+    var prijs = ViewBag.Price ;
+}
+
+
+<h3>Winkelmandje van @user.Name Totaal @prijs.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))</h3>
+@if (Model != null && Model.Any())
+{
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0;">
+        @foreach (var item in Model)
+        {
+            
+            var totaal = 1;
+            <li style="list-style-type: none; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 250px;">
+                <form asp-controller="Shop" asp-action="DeleteItem" method="post" class="d-inline">
+                    <input type="hidden" name="itemId" value="@item.ItemId" />
+
+                    <h5>@item.Name</h5>
+                    <p><strong>Categorie:</strong> @item.Category</p>
+                    <p><strong>Prijs:</strong> @((item.Price - (item.Price * @user.Discount / 100)).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL")))</p>
+                    <p><strong>Gewicht:</strong> @item.Weight kg</p>
+                    <p><strong>Levertijd:</strong> @item.DeliveryDays dagen</p>
+                    <p><strong>Beschrijving:</strong> @item.Description</p>
+                    <p><strong>Aantal:</strong> @item.StockQuantity stuks</p>
+
+                    <button type="submit" class="btn btn-outline-primary">Verwijder</button>
+                </form>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Geen producten gevonden.</p>
+}

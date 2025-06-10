@@ -3,6 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using MyClientProject.Repos;
 using MyClientProject.Filters;
 using MyClientProject.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.Collections;
+using Microsoft.EntityFrameworkCore;
+using MyClientProject.Data;
+using System.Security.Claims;
 
 namespace MyClientProject.Controllers
 {
@@ -13,20 +18,29 @@ namespace MyClientProject.Controllers
         private User _user;
 
         private readonly ItemRepo _itemRepo;
+       
 
         public UserController(UserRepo _userRepo,ItemRepo _itemRepo)
         {
             this._userRepo = _userRepo;
             this._itemRepo = _itemRepo;
         }
-        private void User()
+        private async Task<User> User()
         {
             var klantJson = HttpContext.Session.GetString("User");
+  
             if (!string.IsNullOrEmpty(klantJson))
             {
                 _user = JsonSerializer.Deserialize<User>(klantJson);
+                if (_user.ShoppingList.IsNullOrEmpty())
+                {
+                    _user.ShoppingList = new List<int>();
+                }
             }
+            return _user;
         }
+
+        
 
         [HttpGet]
         public IActionResult Index()
@@ -54,6 +68,10 @@ namespace MyClientProject.Controllers
                 return Redirect("/");            }
 
         }
+
+
+        
+
 
 
 
