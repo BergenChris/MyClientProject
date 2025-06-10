@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\berge\\Desktop\\MyClientProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\views\\user\\guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\views\\user\\guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -15,28 +39,8 @@
       "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\views\\user\\client.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\views\\item\\item.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\views\\item\\item.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\repos\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\repos\\itemrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 157,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Item.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\Item\\Item.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\Item\\Item.cshtml",
@@ -71,8 +75,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-10T14:11:48.964Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -84,38 +87,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Program.cs",
+              "RelativeDocumentMoniker": "MyClientProject\\Program.cs",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Program.cs",
+              "RelativeToolTip": "MyClientProject\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T15:22:31.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Models\\User.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Models\\User.cs",
               "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Models\\User.cs",
               "RelativeToolTip": "MyClientProject\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T15:09:49.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Controllers\\ShopController.cs",
               "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Controllers\\ShopController.cs",
               "RelativeToolTip": "MyClientProject\\Controllers\\ShopController.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAowIoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwDYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T14:56:44.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Guest.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Guest.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\User\\Guest.cshtml",
-              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Guest.cshtml*",
-              "RelativeToolTip": "MyClientProject\\Views\\User\\Guest.cshtml*",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Guest.cshtml",
+              "RelativeToolTip": "MyClientProject\\Views\\User\\Guest.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-10T14:17:28.439Z",
@@ -123,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Controllers\\UserController.cs",
@@ -136,20 +152,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Client.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Client.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\User\\Client.cshtml",
-              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Client.cshtml*",
-              "RelativeToolTip": "MyClientProject\\Views\\User\\Client.cshtml*",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Client.cshtml",
+              "RelativeToolTip": "MyClientProject\\Views\\User\\Client.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T14:15:18.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:15:18.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\Shared\\_Layout.cshtml",
@@ -157,38 +172,36 @@
               "RelativeToolTip": "MyClientProject\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T14:14:27.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:14:27.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Employer.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Employer.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\User\\Employer.cshtml",
-              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Employer.cshtml*",
-              "RelativeToolTip": "MyClientProject\\Views\\User\\Employer.cshtml*",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Employer.cshtml",
+              "RelativeToolTip": "MyClientProject\\Views\\User\\Employer.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T14:12:39.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:12:39.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "UserRepo.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Repos\\UserRepo.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Repos\\UserRepo.cs",
-              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Repos\\UserRepo.cs",
-              "RelativeToolTip": "MyClientProject\\Repos\\UserRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Repos\\UserRepo.cs*",
+              "RelativeToolTip": "MyClientProject\\Repos\\UserRepo.cs*",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T14:22:30.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ItemRepo.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Repos\\ItemRepo.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Repos\\ItemRepo.cs",
@@ -196,12 +209,11 @@
               "RelativeToolTip": "MyClientProject\\Repos\\ItemRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T14:36:14.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:36:14.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\Home\\Index.cshtml",
@@ -209,18 +221,17 @@
               "RelativeToolTip": "MyClientProject\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T14:11:43.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:11:43.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\Shop\\Index.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\Shop\\Index.cshtml",
               "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\Shop\\Index.cshtml",
               "RelativeToolTip": "MyClientProject\\Views\\Shop\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-10T14:11:37.882Z",
               "EditorCaption": ""

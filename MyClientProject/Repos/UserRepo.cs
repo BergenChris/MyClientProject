@@ -43,11 +43,30 @@ namespace MyClientProject.Repos
 
             var shoppingListIds = user.ShoppingList;
 
-            var shoppingItems = await _context.Items
-                .Where(item => shoppingListIds.Contains(item.ItemId))
+            // Count how many times each ItemId appears
+            var itemCounts = shoppingListIds
+                .GroupBy(id => id)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            // Fetch all items with IDs in the list
+            var items = await _context.Items
+                .Where(item => itemCounts.Keys.Contains(item.ItemId))
                 .ToListAsync();
 
-            return shoppingItems;
+            // Create a list to hold the repeated items
+            var result = new List<Item>();
+
+            // For each item, add it multiple times based on its count
+            foreach (var item in items)
+            {
+                int count = itemCounts[item.ItemId];
+                for (int i = 0; i < count; i++)
+                {
+                    result.Add(item);
+                }
+            }
+
+            return result;
         }
     }
 }

@@ -34,25 +34,28 @@ namespace MyClientProject
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
-            using (var scope = app.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var dbContext = services.GetRequiredService<ShopDbContext>();
-                dbContext.Database.ExecuteSqlRaw("DELETE FROM [Users]");
-                dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Users', RESEED, 0)");
-                dbContext.Database.ExecuteSqlRaw("DELETE FROM [ShippingAdresses]");
-                dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('ShippingAdresses', RESEED, 0)");
-                dbContext.Database.ExecuteSqlRaw("DELETE FROM [Items]");
-                dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('items', RESEED, 0)");
-                dbContext.Database.ExecuteSqlRaw("DELETE FROM [Orders]");
-                dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Orders', RESEED, 0)");
-                dbContext.Database.ExecuteSqlRaw("DELETE FROM [Stores]");
-                dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Stores', RESEED, 0)");
 
 
-                var seeder = new DataSeeder(dbContext);
-                seeder.SeedItemsFromJson();
-            }
+            //  NODIG INDIEN JE ALLES OPNIEUW WIL INLADEN
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var services = scope.ServiceProvider;
+            //    var dbContext = services.GetRequiredService<ShopDbContext>();
+            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Users]");
+            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Users', RESEED, 0)");
+            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [ShippingAdresses]");
+            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('ShippingAdresses', RESEED, 0)");
+            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Items]");
+            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('items', RESEED, 0)");
+            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Orders]");
+            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Orders', RESEED, 0)");
+            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Stores]");
+            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Stores', RESEED, 0)");
+
+
+            //    var seeder = new DataSeeder(dbContext);
+            //    seeder.SeedItemsFromJson();
+            //}
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
