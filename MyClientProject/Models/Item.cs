@@ -17,5 +17,7 @@ namespace MyClientProject.Models
         public string Description { get; set; } = string.Empty;
         [Required]
         public int StockQuantity { get; set; }
+
+
     }
 }

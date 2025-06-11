@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyClientProject.Repos;
+using MyClientProject.Services.Interfaces;
 using MyClientProject.Filters;
 using MyClientProject.Models;
 using System.Text.Json;
 using Microsoft.IdentityModel.Tokens;
+using MyClientProject.Services;
 
 namespace MyClientProject.Controllers
 {
@@ -11,20 +12,23 @@ namespace MyClientProject.Controllers
     public class ShopController:Controller
     {
 
-        private readonly UserRepo _userRepo;
+        private readonly IUserService _users;
         private User _user;
 
-        private readonly ItemRepo _itemRepo;
+        private readonly IItemService _items;
+        private readonly IOrderService _orders;
 
-        public ShopController(UserRepo _userRepo, ItemRepo _itemRepo)
+        public ShopController(IUserService _users, IItemService _items, IOrderService _orders)
         {
-            this._userRepo = _userRepo;
-            this._itemRepo = _itemRepo;
+            this._users = _users;
+            this._items = _items;
+            this._orders = _orders;
         }
 
-        private void User()
+        private async Task<User> User()
         {
             var klantJson = HttpContext.Session.GetString("User");
+
             if (!string.IsNullOrEmpty(klantJson))
             {
                 _user = JsonSerializer.Deserialize<User>(klantJson);
@@ -33,7 +37,9 @@ namespace MyClientProject.Controllers
                     _user.ShoppingList = new List<int>();
                 }
             }
+            return _user;
         }
+
 
         private async Task<User> GetUserAsync()
         {
@@ -44,7 +50,7 @@ namespace MyClientProject.Controllers
             if (userId == null)
                 return null;
 
-            return await _userRepo.GetUserByIdAsync(userId);
+            return await _users.GetUserByIdAsync(userId);
         }
 
         [HttpGet]
@@ -52,10 +58,11 @@ namespace MyClientProject.Controllers
         {
             User();
             
-            var shoppingList = await _userRepo.GetShoppingListFromUser(_user.UserId);
+            var shoppingList = await _users.GetShoppingListFromUser(_user.UserId);
             decimal Prijs = 0;
-            foreach (var item in shoppingList)
+            foreach (var x in shoppingList)
             {
+                var item = await _items.GetAsync(x.ItemId);
                 decimal discountedPrice = item.Price * (1 - ((decimal)_user.Discount / 100));
                 Prijs += discountedPrice;
             }
@@ -81,7 +88,7 @@ namespace MyClientProject.Controllers
                 user.ShoppingList = new List<int>();
             }
 
-            var item = await _itemRepo.GetAsync(itemId); // Assuming GetAsync is async
+            var item = await _items.GetAsync(itemId); // Assuming GetAsync is async
             if (item == null)
             {
                 return NotFound();
@@ -94,10 +101,10 @@ namespace MyClientProject.Controllers
                 // Decrement stock quantity
                 item.StockQuantity--;
                 // Update item in repository
-                await _itemRepo.UpdateItemAsync(item);
-                await _userRepo.UpdateUserAsync(user);
+                await _items.UpdateItemAsync(item.ItemId);
+                await _users.UpdateUserAsync(user);
                 // Save changes to user
-                await _userRepo.SaveChangesAsync();
+                await _users.SaveChangesAsync();
 
             }
             else
@@ -105,7 +112,7 @@ namespace MyClientProject.Controllers
                 return NotFound();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","User");
         }
         [HttpPost]
         public async Task<IActionResult> DeleteItem(int itemId)
@@ -122,7 +129,7 @@ namespace MyClientProject.Controllers
                 user.ShoppingList = new List<int>();
             }
 
-            var item = await _itemRepo.GetAsync(itemId); // Assuming GetAsync is async
+            var item = await _items.GetAsync(itemId); // Assuming GetAsync is async
             if (item == null)
             {
                 return NotFound();
@@ -132,13 +139,45 @@ namespace MyClientProject.Controllers
             // Decrement stock quantity
             item.StockQuantity++;
             // Update item in repository
-            await _itemRepo.UpdateItemAsync(item);
-            await _userRepo.UpdateUserAsync(user);
+            await _items.UpdateItemAsync(item.ItemId);
+            await _users.UpdateUserAsync(user);
             // Save changes to user
-            await _userRepo.SaveChangesAsync();
+            await _users.SaveChangesAsync();
 
 
             return RedirectToAction("Index");
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Order(Order order)
+        {
+            var user = await GetUserAsync();
+            if (user == null)
+            {
+                return NotFound();
+            }
+            Task<List<int>> shoppingListIds = _users.GetShoppingListIdsFromUser(user.UserId);
+            List<int> ids = await shoppingListIds;
+            Task<List<Item>> shoppingList = _users.GetShoppingListFromUser(user.UserId);
+            List<Item> items = await shoppingList;
+            decimal Prijs = 0;
+            foreach (var item in items)
+            {
+                decimal discountedPrice = item.Price * (1 - ((decimal)_user.Discount / 100));
+                Prijs += discountedPrice;
+            }
+            ViewBag.User = _user;
+            ViewBag.Price = Prijs;
+
+            
+            await _orders.CreateOrderAsync(user,ids);
+            await _users.ClearShoppingListAfterOrder(user.UserId);
+            await _users.UpdateUserAsync(user);
+            await _users.SaveChangesAsync();
+
+            return View("Order",items);
         }
 
 

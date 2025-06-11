@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Identity;
+
 using Microsoft.EntityFrameworkCore;
 using MyClientProject.Data;
-using MyClientProject.Models;
+
 using MyClientProject.Repos;
 using MyClientProject.Repos.Interfaces;
-using System.Text.Json;
-using System;
+
 using MyClientProject.Services;
+using MyClientProject.Services.Interfaces;
 
 namespace MyClientProject
 {
@@ -21,12 +21,12 @@ namespace MyClientProject
             builder.Services.AddDbContext<ShopDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-            builder.Services.AddScoped<UserRepo>();
             builder.Services.AddScoped<IUserRepo, UserRepo>();
-            builder.Services.AddScoped<ItemRepo>();
             builder.Services.AddScoped<IItemRepo, ItemRepo>();
-            builder.Services.AddScoped<OrderRepo>();
             builder.Services.AddScoped<IOrderRepo, OrderRepo>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IItemService, ItemService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddSession();
             builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider();
             //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -36,26 +36,26 @@ namespace MyClientProject
             var app = builder.Build();
 
 
-            //  NODIG INDIEN JE ALLES OPNIEUW WIL INLADEN
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //    var services = scope.ServiceProvider;
-            //    var dbContext = services.GetRequiredService<ShopDbContext>();
-            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Users]");
-            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Users', RESEED, 0)");
-            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [ShippingAdresses]");
-            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('ShippingAdresses', RESEED, 0)");
-            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Items]");
-            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('items', RESEED, 0)");
-            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Orders]");
-            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Orders', RESEED, 0)");
-            //    dbContext.Database.ExecuteSqlRaw("DELETE FROM [Stores]");
-            //    dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Stores', RESEED, 0)");
+            ////////  NODIG INDIEN JE ALLES OPNIEUW WIL INLADEN
+           using (var scope = app.Services.CreateScope())
+            {
+             var services = scope.ServiceProvider;
+               var dbContext = services.GetRequiredService<ShopDbContext>();
+               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Users]");
+               dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Users', RESEED, 0)");
+               dbContext.Database.ExecuteSqlRaw("DELETE FROM [ShippingAdresses]");
+              dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('ShippingAdresses', RESEED, 0)");
+               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Items]");
+             dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('items', RESEED, 0)");
+              dbContext.Database.ExecuteSqlRaw("DELETE FROM [Orders]");
+              dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Orders', RESEED, 0)");
+               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Stores]");
+               dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Stores', RESEED, 0)");
 
 
-            //    var seeder = new DataSeeder(dbContext);
-            //    seeder.SeedItemsFromJson();
-            //}
+               var seeder = new DataSeeder(dbContext);
+               seeder.SeedItemsFromJson();
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

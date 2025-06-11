@@ -7,7 +7,7 @@
 }
 
 
-<h3>Winkelmandje van @user.Name Totaal @prijs.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))</h3>
+<h3>Winkelmandje van @user.Name Totaal @prijs.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL")) <a asp-controller="Shop" asp-action="Order" class="btn btn-primary btn-sm" style="margin-left: 10px; color:darkred">Order</a></h3>
 @if (Model != null && Model.Any())
 {
     <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0;">

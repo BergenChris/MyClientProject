@@ -30,6 +30,7 @@ namespace MyClientProject.Data
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Client>().ToTable("Clients");
             modelBuilder.Entity<Employer>().ToTable("Employers");
+            modelBuilder.Entity<Order>().ToTable("Orders");
 
             modelBuilder.Entity<ShippingAdress>()
                 .HasOne(sa => sa.User)
@@ -43,7 +44,8 @@ namespace MyClientProject.Data
                 .HasForeignKey(sa => sa.StoreId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-       
+           
+
 
             base.OnModelCreating(modelBuilder);
         }

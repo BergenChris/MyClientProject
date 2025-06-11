@@ -24,9 +24,9 @@ namespace MyClientProject.Repos
             _context.Items.Update(item);
         }
 
-        public IEnumerable<Item> GetAll()
+        public List<Item> GetAll()
         {
-            return _context.Items;
+            return _context.Items.ToList();
         }
 
         public void UpdateItem(Item item)

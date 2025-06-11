@@ -23,7 +23,9 @@
                     <p><strong>Levertijd:</strong> @item.DeliveryDays dagen</p>
                     <p><strong>Beschrijving:</strong> @item.Description</p>
                     <p><strong>Voorraad:</strong> @item.StockQuantity stuks</p>
-
+                    <a asp-controller="Item" asp-action="Index" asp-route-itemId="@item.ItemId" class="btn btn-secondary ml-2">
+                        Details
+                    </a>
                     <button type="submit" class="btn btn-outline-primary">Koop</button>
                 </form>
             </li>

@@ -3,45 +3,72 @@ using MyClientProject.Models;
 using MyClientProject.Repos;
 using MyClientProject.Filters;
 using System.Text.Json;
+using MyClientProject.Services.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 
 namespace MyClientProject.Controllers
 {
     [KlantSessionAuthorize]
     public class ItemController : Controller
     {
-        private readonly UserRepo _userRepo;
+        private readonly IUserService _users;
         private User _user;
 
-        private readonly ItemRepo _itemRepo;
+        private readonly IItemService _items;
+        private readonly IOrderService _orders;
 
-        public ItemController(UserRepo _userRepo, ItemRepo _itemRepo)
+        public ItemController(IUserService _users, IItemService _items, IOrderService _orders)
         {
-            this._userRepo = _userRepo;
-            this._itemRepo = _itemRepo;
+            this._users = _users;
+            this._items = _items;
+            this._orders = _orders;
         }
-        private void User()
+        private async Task<User> User()
         {
             var klantJson = HttpContext.Session.GetString("User");
+
             if (!string.IsNullOrEmpty(klantJson))
             {
                 _user = JsonSerializer.Deserialize<User>(klantJson);
+                if (_user.ShoppingList.IsNullOrEmpty())
+                {
+                    _user.ShoppingList = new List<int>();
+                }
             }
+            return _user;
+        }
+
+
+        private async Task<User> GetUserAsync()
+        {
+            // Replace with your actual method of fetching user from database
+            // e.g., based on logged-in user identity
+            User();
+            var userId = _user.UserId;
+            if (userId == null)
+                return null;
+
+            return await _users.GetUserByIdAsync(userId);
         }
 
 
         [HttpGet]
-        public IActionResult Index(int id)
+        public async Task<IActionResult> Index(int itemId)
         {
-            User();
-            if (_user != null)
+            
+            Item item = await _items.GetAsync(itemId);
+            if (item == null)
             {
-                ViewBag.Item = _itemRepo.GetAsync(id);
-                return View("item",_user);
+                Console.WriteLine($"Item with ID {itemId} was NOT found.");
+                return NotFound(); // Optional but good to add
             }
-            else
-            {
-                return Redirect("/");
-            }
+
+            Console.WriteLine($"Item found: {item.Name}, Price: {item.Price}");
+
+            return View("Item", item);
+
+
+
 
         }
     }

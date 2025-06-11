@@ -8,22 +8,22 @@ using System.Collections;
 using Microsoft.EntityFrameworkCore;
 using MyClientProject.Data;
 using System.Security.Claims;
+using MyClientProject.Services.Interfaces;
 
 namespace MyClientProject.Controllers
 {
     [KlantSessionAuthorize]
     public class UserController : Controller
     {
-        private readonly UserRepo _userRepo;
+        private readonly IUserService _users;
+        private readonly IItemService _items;
         private User _user;
 
-        private readonly ItemRepo _itemRepo;
-       
 
-        public UserController(UserRepo _userRepo,ItemRepo _itemRepo)
+        public UserController(IUserService _users,IItemService _items)
         {
-            this._userRepo = _userRepo;
-            this._itemRepo = _itemRepo;
+            this._users = _users;
+            this._items = _items;
         }
         private async Task<User> User()
         {
@@ -48,7 +48,7 @@ namespace MyClientProject.Controllers
             User();
             if (_user != null)
             {
-                ViewBag.Items = _itemRepo.GetAll();
+                ViewBag.Items = _items.GetAllItems();
                 if (_user.Role == "Client")
                 {
 

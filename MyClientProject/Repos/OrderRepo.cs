@@ -23,5 +23,12 @@ namespace MyClientProject.Repos
         {
             return context.Orders.Where(x => x.UserId == id).ToList(); ;
         }
+
+        public async Task AddOrderAsync(Order order)
+        {
+     
+            context.Orders.Add(order);
+            await context.SaveChangesAsync();
+        }
     }
 }

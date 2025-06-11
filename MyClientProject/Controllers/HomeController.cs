@@ -4,16 +4,17 @@ using MyClientProject.Models;
 using MyClientProject.Repos;
 using System.Diagnostics;
 using System.Text.Json;
+using MyClientProject.Services.Interfaces;
 
 namespace MyClientProject.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly UserRepo _userRepo;
+        private readonly IUserService _users;
 
-        public HomeController(UserRepo _userRepo)
+        public HomeController(IUserService _users)
         {
-            this._userRepo=_userRepo;
+            this._users=_users;
         }
         [HttpGet]
         public IActionResult Index()
@@ -31,7 +32,7 @@ namespace MyClientProject.Controllers
                 return View("Index"); 
             }
 
-            var gevondenKlant = _userRepo
+            var gevondenKlant = _users
             .GetAll()
             .FirstOrDefault(k => k.Name.ToLower() == user.Name.ToLower()  && k.UserEmail.ToLower() == user.UserEmail.ToLower());
 

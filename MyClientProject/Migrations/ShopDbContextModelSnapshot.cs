@@ -45,9 +45,6 @@ namespace MyClientProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -58,8 +55,6 @@ namespace MyClientProject.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("ItemId");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("Items");
                 });
@@ -72,6 +67,10 @@ namespace MyClientProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
+                    b.Property<string>("Items")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
@@ -80,7 +79,7 @@ namespace MyClientProject.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("MyClientProject.Models.ShippingAdress", b =>
@@ -229,13 +228,6 @@ namespace MyClientProject.Migrations
                     b.ToTable("Employers", (string)null);
                 });
 
-            modelBuilder.Entity("MyClientProject.Models.Item", b =>
-                {
-                    b.HasOne("MyClientProject.Models.Order", null)
-                        .WithMany("Items")
-                        .HasForeignKey("OrderId");
-                });
-
             modelBuilder.Entity("MyClientProject.Models.ShippingAdress", b =>
                 {
                     b.HasOne("MyClientProject.Models.Store", "Store")
@@ -269,11 +261,6 @@ namespace MyClientProject.Migrations
                         .HasForeignKey("MyClientProject.Models.Employer", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("MyClientProject.Models.Order", b =>
-                {
-                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("MyClientProject.Models.Store", b =>

@@ -6,8 +6,8 @@ namespace MyClientProject.Repos.Interfaces
     {
         Task<Item> GetAsync(int id);
         Task UpdateItemAsync(Item item);
-        IEnumerable<Item> GetAll();
-        public void UpdateItem(Item item);
+        List<Item> GetAll();
+       
         
 
     }
