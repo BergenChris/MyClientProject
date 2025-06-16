@@ -4,7 +4,7 @@ namespace MyClientProject.Repos.Interfaces
 {
     public interface IItemRepo
     {
-        Task<Item> GetAsync(int id);
+        Task<Item> GetAsync(int itemId);
         Task UpdateItemAsync(Item item);
         List<Item> GetAll();
        

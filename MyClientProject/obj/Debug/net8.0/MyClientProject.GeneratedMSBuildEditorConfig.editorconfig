@@ -30,8 +30,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Item.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxJdGVtLmNzaHRtbA==
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shared/Error.cshtml]
@@ -64,6 +68,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Guest.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/PastOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXN0T3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/_ViewImports.cshtml]

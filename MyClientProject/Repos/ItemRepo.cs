@@ -22,6 +22,7 @@ namespace MyClientProject.Repos
         public async Task UpdateItemAsync(Item item)
         {
             _context.Items.Update(item);
+            _context.SaveChanges();
         }
 
         public List<Item> GetAll()

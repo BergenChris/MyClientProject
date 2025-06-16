@@ -1,4 +1,5 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using MyClientProject.Data;
 using MyClientProject.Models;
 using MyClientProject.Repos.Interfaces;
@@ -7,28 +8,33 @@ namespace MyClientProject.Repos
 {
     public class OrderRepo : IOrderRepo
     {
-        private readonly ShopDbContext context;
+        private readonly ShopDbContext _context;
 
-        public OrderRepo(ShopDbContext context)
+        public OrderRepo(ShopDbContext _context)
         {
-            this.context = context;
+            this._context = _context;
         }
 
-        public Order? Get(int id)
+        public async Task<Order?> Get(int id)
         {
-            return context.Orders.FirstOrDefault(x => x.OrderId == id);
+            return await _context.Orders.FirstOrDefaultAsync(x => x.OrderId == id);
         }
 
-        public IEnumerable<Order> GetAllFromUser(int id)
+        public async Task<List<Order>> GetOrdersByUserIdAsync(int userId)
         {
-            return context.Orders.Where(x => x.UserId == id).ToList(); ;
+            return await _context.Orders
+                .Where(o => o.UserId == userId)
+                .OrderByDescending(o => o.OrderDate)
+                .ToListAsync();
         }
 
         public async Task AddOrderAsync(Order order)
         {
      
-            context.Orders.Add(order);
-            await context.SaveChangesAsync();
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
         }
+
+        
     }
 }

@@ -1,0 +1,34 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Bestelgegevens";
+    var user = ViewBag.User as User;
+
+
+}
+
+<h2>Bestelling geplaatst op </h2>
+
+@if (@Model != null && @Model.Any())
+{
+    <h4>Totaalprijs:</h4>
+
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; gap: 15px; padding: 0;">
+        @foreach (var item in @Model)
+        {
+            <li style="list-style: none; border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 250px;">
+                <h5>@item.Name</h5>
+                <p><strong>Categorie:</strong> @item.Category</p>
+                <p><strong>Prijs:</strong> € @item.Price.ToString("C")</p>
+                <p><strong>Gewicht:</strong> @item.Weight kg</p>
+                <p><strong>Levertijd:</strong> @item.DeliveryDays dagen</p>
+                <p><strong>Beschrijving:</strong> @item.Description</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Er zijn geen producten gevonden voor deze bestelling.</p>
+}
+
+<a asp-controller="Shop" asp-action="PastOrders" class="btn btn-secondary mt-3">Terug naar bestellingen</a>

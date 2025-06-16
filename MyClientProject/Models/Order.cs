@@ -10,12 +10,14 @@ namespace MyClientProject.Models
 
         [ForeignKey("User")]
         public int UserId { get; set; }
+        public decimal TotalPrice { get; set; }
       
         public List<int> Items { get; set; } = new();
 
-        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public DateTime OrderDate { get; set; } =  TimeZoneInfo
+            .ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"));
 
-      
+
 
     }
 }

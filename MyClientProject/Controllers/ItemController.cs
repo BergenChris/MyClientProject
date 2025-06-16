@@ -65,11 +65,45 @@ namespace MyClientProject.Controllers
 
             Console.WriteLine($"Item found: {item.Name}, Price: {item.Price}");
 
-            return View("Item", item);
-
-
-
+            return View(item);
 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int itemId)
+        {
+
+            Item item = await _items.GetAsync(itemId);
+            if (item == null)
+            {
+                Console.WriteLine($"Item with ID {itemId} was NOT found.");
+                return NotFound(); // Optional but good to add
+            }
+
+            Console.WriteLine($"Item found: {item.Name}, Price: {item.Price}");
+
+            return View(item);
+
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> EditItem(Item updatedItem)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(updatedItem);
+            }
+
+            bool updated = await _items.UpdateItemAsync(updatedItem.ItemId, updatedItem);
+            if (!updated)
+            {
+                ModelState.AddModelError("", "Item niet gevonden.");
+                return View(updatedItem);
+            }
+
+            return RedirectToAction("Index", "User");
+        }
+
     }
 }

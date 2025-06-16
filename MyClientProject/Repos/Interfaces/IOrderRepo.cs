@@ -4,9 +4,10 @@ namespace MyClientProject.Repos.Interfaces
 {
     public interface IOrderRepo
     {
-        public Order? Get(int id);
-        public IEnumerable<Order> GetAllFromUser(int id);
+        Task< Order?> Get(int id);
+        Task<List<Order>> GetOrdersByUserIdAsync(int userId);
 
         Task AddOrderAsync(Order order);
+      
     }
 }

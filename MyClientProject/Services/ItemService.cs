@@ -17,15 +17,23 @@ namespace MyClientProject.Services
         {
             return await _itemRepo.GetAsync(id);
         }
-        public async Task<bool> UpdateItemAsync(int itemId)
+        public async Task<bool> UpdateItemAsync(int itemId, Item updatedItem)
         {
-            var item = await _itemRepo.GetAsync(itemId);
-            if (item == null)
+            var existingItem = await _itemRepo.GetAsync(itemId);
+            if (existingItem == null)
                 return false;
 
-            // Business logic: validate stock, apply discounts, etc.
-          
-            await _itemRepo.UpdateItemAsync(item);
+            // Apply changes from the updated item
+            existingItem.Name = updatedItem.Name;
+            existingItem.Category = updatedItem.Category;
+            existingItem.Price = updatedItem.Price;
+            existingItem.Weight = updatedItem.Weight;
+            existingItem.DeliveryDays = updatedItem.DeliveryDays;
+            existingItem.StockQuantity = updatedItem.StockQuantity;
+            existingItem.Description = updatedItem.Description;
+
+            // Save changes
+            await _itemRepo.UpdateItemAsync(existingItem);
             return true;
         }
         public List<Item> GetItemsByIds(List<int> list)

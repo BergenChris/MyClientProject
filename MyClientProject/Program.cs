@@ -21,6 +21,7 @@ namespace MyClientProject
             builder.Services.AddDbContext<ShopDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddScoped < ISeedService,SeedService>();
             builder.Services.AddScoped<IUserRepo, UserRepo>();
             builder.Services.AddScoped<IItemRepo, ItemRepo>();
             builder.Services.AddScoped<IOrderRepo, OrderRepo>();
@@ -36,26 +37,7 @@ namespace MyClientProject
             var app = builder.Build();
 
 
-            ////////  NODIG INDIEN JE ALLES OPNIEUW WIL INLADEN
-           using (var scope = app.Services.CreateScope())
-            {
-             var services = scope.ServiceProvider;
-               var dbContext = services.GetRequiredService<ShopDbContext>();
-               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Users]");
-               dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Users', RESEED, 0)");
-               dbContext.Database.ExecuteSqlRaw("DELETE FROM [ShippingAdresses]");
-              dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('ShippingAdresses', RESEED, 0)");
-               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Items]");
-             dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('items', RESEED, 0)");
-              dbContext.Database.ExecuteSqlRaw("DELETE FROM [Orders]");
-              dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Orders', RESEED, 0)");
-               dbContext.Database.ExecuteSqlRaw("DELETE FROM [Stores]");
-               dbContext.Database.ExecuteSqlRaw("DBCC CHECKIDENT ('Stores', RESEED, 0)");
-
-
-               var seeder = new DataSeeder(dbContext);
-               seeder.SeedItemsFromJson();
-            }
+          
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

@@ -6,7 +6,7 @@
 }
 
 
-<h3>Kies een product</h3>
+<h3>Kies een product @Model.Name met korting @Model.Discount %</h3>
 @if (items != null && items.Any())
 {
     <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0;">
@@ -23,8 +23,10 @@
                     <p><strong>Levertijd:</strong> @item.DeliveryDays dagen</p>
                     <p><strong>Beschrijving:</strong> @item.Description</p>
                     <p><strong>Voorraad:</strong> @item.StockQuantity stuks</p>
-
-                    <button type="submit" class="btn btn-outline-primary">Selecteer</button>
+                    <a asp-controller="Item" asp-action="Index" asp-route-itemId="@item.ItemId" class="btn btn-secondary ml-2">
+                        Details
+                    </a>
+                    <button type="submit" class="btn btn-outline-primary">Koop</button>
                 </form>
             </li>
         }

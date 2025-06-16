@@ -1,0 +1,22 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<h2>User Profile</h2>
+
+<div>
+    <p><strong>Naam:</strong> @Model.Name</p>
+    <p><strong>E-mailadres:</strong> @Model.UserEmail</p>
+    <p><strong>Rol:</strong> @Model.Role</p>
+    <p><strong>Discount:</strong> @Model.Discount %</p>
+    <p><strong>Shopping List: @Model.ShoppingList.Count()</strong></p>
+    
+</div>
+
+<div class="mt-3">
+    <a asp-controller="User" asp-action="PastOrders" class="btn btn-secondary">Bekijk eerdere bestellingen</a>
+</div>
+
+<a asp-controller="User" asp-action="Index" class="btn btn-primary">Terug naar winkel</a>

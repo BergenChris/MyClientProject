@@ -10,8 +10,10 @@ namespace MyClientProject.Models
         public int UserId { get; set; }
       
         [EmailAddress]
+        [Display(Name = "E-mailadres")]
         public string UserEmail { get; set; } = string.Empty;
-  
+
+        [Display(Name = "Naam")]
         public string Name { get; set; } = string.Empty;
         public int Age { get; set; }
         public string City { get; set; } = string.Empty;

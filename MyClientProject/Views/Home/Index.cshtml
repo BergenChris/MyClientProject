@@ -3,21 +3,30 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h2>Welkom! Meld je aan, om te kunnen shoppen</h2>
-<form asp-action="Inloggen" method="post">
-    <div>
-        <label asp-for="Name"></label>
-        <input asp-for="Name" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+
+<form asp-action="Inloggen" method="post" style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; flex-direction: column; width: 650px;">
+        <h2>Welkom! Meld je aan om te shoppen</h2>
+        <div style="display: flex; align-items: center; width: 100%;">
+            <label asp-for="Name" style="width: 150px; margin: 0;">Naam</label>
+            <input asp-for="Name" style="width: 500px; padding: 6px; box-sizing: border-box;" />
+        </div>
+        <span asp-validation-for="Name" class="text-danger" style="margin-left: 150px; margin-bottom: 5px;"></span>
+
+        <div style="display: flex; align-items: center; width: 100%;">
+            <label asp-for="UserEmail" style="width: 150px; margin: 0;">E-mailadres</label>
+            <input asp-for="UserEmail" style="width: 500px; padding: 6px; box-sizing: border-box;" />
+        </div>
+        <span asp-validation-for="UserEmail" class="text-danger" style="margin-left: 150px; margin-bottom: 5px;"></span>
     </div>
 
-    <div>
-        <label asp-for="UserEmail"></label>
-        <input asp-for="UserEmail" />
-        <span asp-validation-for="UserEmail" class="text-danger"></span>
+    <div style="margin-top: 20px; width: 650px; display: flex; justify-content: center;">
+        <button type="submit" value="User" style="width: 200px;">Aanmelden</button>
     </div>
-
-    
-
-    <input type="submit" value="Aanmelden" />
+    <a asp-controller="Home" asp-action="SeedDatabase" class="btn btn-warning" role="button" style="margin-top: 300px;">
+        Verwijder DB en voer dummiedata opnieuw toe
+    </a>
 </form>
+
+
+

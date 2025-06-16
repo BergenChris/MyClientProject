@@ -1,0 +1,40 @@
+﻿@model List<Order>
+
+@{
+    ViewData["Title"] = "Past Orders";
+}
+
+<h2>Past Orders</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Er zijn geen bestellingen gevonden.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Orderdatum</th>
+                <th>Aantal items</th>
+                <th>Totaalprijs</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.OrderDate.ToString("dd-MM-yyyy HH:mm")</td>
+                    <td>@(order.Items?.Count ?? 0)</td>
+                    <td>€ @order.TotalPrice</td>
+                    <td>
+                        <a asp-controller="User" asp-action="OrderDetails" asp-route-Id="@order.OrderId" class="btn btn-primary btn-sm">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

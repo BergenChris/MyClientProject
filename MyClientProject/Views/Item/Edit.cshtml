@@ -1,0 +1,49 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "Item Details";
+}
+
+<h2>Details van @Model.Name</h2>
+
+<form asp-controller="Item" asp-action="EditItem" method="post">
+    <input type="hidden" asp-for="ItemId" />
+
+    <div class="mb-2">
+        <label asp-for="Name"><strong>Naam:</strong></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="Category"><strong>Categorie:</strong></label>
+        <input asp-for="Category" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="Price"><strong>Prijs:</strong></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="Weight"><strong>Gewicht (kg):</strong></label>
+        <input asp-for="Weight" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="DeliveryDays"><strong>Leverdagen:</strong></label>
+        <input asp-for="DeliveryDays" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="StockQuantity"><strong>Voorraad:</strong></label>
+        <input asp-for="StockQuantity" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label asp-for="Description"><strong>Beschrijving:</strong></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Opslaan</button>
+    <a asp-controller="User" asp-action="Index" class="btn btn-secondary">Terug</a>
+</form>
+
