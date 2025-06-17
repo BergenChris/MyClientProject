@@ -7,8 +7,10 @@ namespace MyClientProject.Repos.Interfaces
         Task<Item> GetAsync(int itemId);
         Task UpdateItemAsync(Item item);
         List<Item> GetAll();
-       
-        
+        Task CreateAsync(Item item);
+
+
+
 
     }
 }

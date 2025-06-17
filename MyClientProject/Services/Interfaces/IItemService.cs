@@ -8,5 +8,6 @@ namespace MyClientProject.Services.Interfaces
         Task<bool> UpdateItemAsync(int itemId, Item updatedItem);
         List<Item> GetItemsByIds(List<int> list);
         List<Item> GetAllItems();
+        Task<bool> CreateAsync(Item item);
     }
 }

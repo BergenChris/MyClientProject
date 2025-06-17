@@ -14,15 +14,17 @@ namespace MyClientProject.Repos
             this._context = context;
         }
 
-        public async Task<Item> GetAsync(int itemId)
+        public async Task<Item?> GetAsync(int itemId)
         {
-            return await _context.Items.FindAsync(itemId);
+
+            return await _context.Items
+        .FirstOrDefaultAsync(i => i.ItemId == itemId);
         }
 
         public async Task UpdateItemAsync(Item item)
         {
             _context.Items.Update(item);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public List<Item> GetAll()
@@ -30,9 +32,10 @@ namespace MyClientProject.Repos
             return _context.Items.ToList();
         }
 
-        public void UpdateItem(Item item)
+       
+        public async Task CreateAsync(Item item)
         {
-            _context.Items.Update(item);
+            _context.Add(item);
             _context.SaveChanges();
         }
 

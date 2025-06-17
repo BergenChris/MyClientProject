@@ -1,0 +1,47 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Create User";
+}
+
+
+<h2 style="display: flex; flex-direction: column; align-items: center;">Nieuwe Gebruiker Aanmaken</h2>
+
+<form asp-controller="Home" asp-action="CreateAccount" method="post" style="display: flex; flex-direction: column; align-items: center; ">
+    <div class="mb-2" style="width:500px;align-items: center;">
+        <label asp-for="UserEmail"><strong>E-mailadres:</strong></label>
+        <input asp-for="UserEmail" class="form-control" />
+        <span asp-validation-for="UserEmail" class="text-danger"></span>
+    </div>
+
+    <div class="mb-2" style="width:500px;align-items: center;">
+        <label asp-for="Name"><strong>Naam:</strong></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-2" style="width:500px;align-items: center;">
+        <label asp-for="Age"><strong>Leeftijd:</strong></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="mb-2" style="width:500px;align-items: center;">
+        <label asp-for="City"><strong>Stad:</strong></label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="mb-2" style="width:500px;align-items: center;">
+        <label asp-for="Country"><strong>Land:</strong></label>
+        <input asp-for="Country" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="Role" value="Client" />
+    <input type="hidden" asp-for="Discount" value="0" />
+
+
+    <button type="submit" class="btn btn-primary">Aanmaken</button>
+    <a asp-controller="User" asp-action="Index" class="btn btn-secondary;margin-top:200px;">Annuleren</a>
+</form>

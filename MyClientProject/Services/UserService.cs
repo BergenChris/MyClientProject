@@ -17,6 +17,11 @@ namespace MyClientProject.Services
             _context = context;
         }
 
+        public async Task CreateUserAsync(User user)
+        {
+            await _userRepo.AddUserAsync(user);
+            await _context.SaveChangesAsync();
+        }
         public Task<User> GetUserByIdAsync(int userId)
         {
             return _userRepo.GetUserByIdAsync(userId);

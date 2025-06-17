@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Home/CreateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Home/Guest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,12 +38,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxFZGl0LmNzaHRtbA==
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxJbmRleC5jc2h0bWw=
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Item/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shared/Error.cshtml]
@@ -50,24 +58,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDbGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Order.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxPcmRlci5jc2h0bWw=
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Employer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxFbXBsb3llci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Client.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDbGllbnQuY3NodG1s
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Guest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxHdWVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Employer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFbXBsb3llci5jc2h0bWw=
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/Shop/Item.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Guest.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHdWVzdC5jc2h0bWw=
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/berge/Desktop/MyClientProject/MyClientProject/Views/User/OrderDetail.cshtml]

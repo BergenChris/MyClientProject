@@ -11,7 +11,11 @@
     <p><strong>E-mailadres:</strong> @Model.UserEmail</p>
     <p><strong>Rol:</strong> @Model.Role</p>
     <p><strong>Discount:</strong> @Model.Discount %</p>
-    <p><strong>Shopping List: @Model.ShoppingList.Count()</strong></p>
+    @if (Model.ShoppingList != null && Model.ShoppingList.Count() > 0)
+    {
+        <p><strong>Shopping List: @Model.ShoppingList.Count()</strong></p>
+    }
+    
     
 </div>
 

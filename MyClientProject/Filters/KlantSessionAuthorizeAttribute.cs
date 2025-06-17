@@ -6,15 +6,24 @@ using System.Text.Json;
 
 namespace MyClientProject.Filters
 {
-    public class KlantSessionAuthorizeAttribute : Attribute,IAuthorizationFilter
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
+    public class KlantSessionAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
+        private readonly bool _requireEmployer;
+
+        // By default, user is required but not employer role
+        public KlantSessionAuthorizeAttribute() => _requireEmployer = false;
+
+        // If true, access only allowed for Employers
+        public KlantSessionAuthorizeAttribute(bool requireEmployer) => _requireEmployer = requireEmployer;
+
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             var userJson = context.HttpContext.Session.GetString("User");
 
             if (string.IsNullOrEmpty(userJson))
             {
-                context.Result = new RedirectToActionResult("Index", "Home", new { area = "" });
+                context.Result = new RedirectToActionResult("Index", "Home", null);
                 return;
             }
 
@@ -24,16 +33,22 @@ namespace MyClientProject.Filters
 
                 if (user == null || string.IsNullOrWhiteSpace(user.Name) || string.IsNullOrWhiteSpace(user.UserEmail))
                 {
-                    // User exists but invalid (no name/email) → redirect
-                    context.Result = new RedirectToActionResult("Index", "Home", new { area = "" });
+                    context.Result = new RedirectToActionResult("Index", "Home", null);
+                    return;
                 }
 
-                // Else: valid user or guest with required info → allow
+                if (_requireEmployer && !string.Equals(user.Role, "Employer", StringComparison.OrdinalIgnoreCase))
+                {
+                    // User is logged in but not Employer
+                    context.Result = new ForbidResult(); // or Redirect if you prefer
+                }
+
+                // else: user is valid, and if required, has Employer role
+                // allow access
             }
             catch
             {
-                // Session data is corrupt or wrong format → redirect
-                context.Result = new RedirectToActionResult("Index", "Home", new { area = "" });
+                context.Result = new RedirectToActionResult("Index", "Home", null);
             }
         }
     }

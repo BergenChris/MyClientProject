@@ -5,23 +5,25 @@ using MyClientProject.Filters;
 using System.Text.Json;
 using MyClientProject.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.Contracts;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MyClientProject.Controllers
 {
-    [KlantSessionAuthorize]
+    [KlantSessionAuthorize(true)]
     public class ItemController : Controller
     {
         private readonly IUserService _users;
         private User _user;
 
         private readonly IItemService _items;
-        private readonly IOrderService _orders;
+       
 
-        public ItemController(IUserService _users, IItemService _items, IOrderService _orders)
+        public ItemController(IUserService _users, IItemService _items)
         {
             this._users = _users;
             this._items = _items;
-            this._orders = _orders;
+            
         }
         private async Task<User> User()
         {
@@ -52,22 +54,6 @@ namespace MyClientProject.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Index(int itemId)
-        {
-            
-            Item item = await _items.GetAsync(itemId);
-            if (item == null)
-            {
-                Console.WriteLine($"Item with ID {itemId} was NOT found.");
-                return NotFound(); // Optional but good to add
-            }
-
-            Console.WriteLine($"Item found: {item.Name}, Price: {item.Price}");
-
-            return View(item);
-
-        }
 
         [HttpGet]
         public async Task<IActionResult> Edit(int itemId)
@@ -95,15 +81,31 @@ namespace MyClientProject.Controllers
                 return View(updatedItem);
             }
 
-            bool updated = await _items.UpdateItemAsync(updatedItem.ItemId, updatedItem);
-            if (!updated)
-            {
-                ModelState.AddModelError("", "Item niet gevonden.");
-                return View(updatedItem);
-            }
+            await _items.UpdateItemAsync(updatedItem.ItemId, updatedItem);
+            
 
             return RedirectToAction("Index", "User");
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateItem(Item item)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Item",item);
+            }
+            await _items.CreateAsync(item);
+  
+            ViewBag.SuccessMessage = $"Item \"{item.Name}\" succesvol toegevoegd!";
+            ModelState.Clear();
+            return View("Create");
+        }
+        
 
     }
 }

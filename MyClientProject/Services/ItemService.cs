@@ -1,4 +1,5 @@
-﻿using MyClientProject.Models;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using MyClientProject.Models;
 using MyClientProject.Repos.Interfaces;
 using MyClientProject.Services.Interfaces;
 
@@ -20,8 +21,7 @@ namespace MyClientProject.Services
         public async Task<bool> UpdateItemAsync(int itemId, Item updatedItem)
         {
             var existingItem = await _itemRepo.GetAsync(itemId);
-            if (existingItem == null)
-                return false;
+           
 
             // Apply changes from the updated item
             existingItem.Name = updatedItem.Name;
@@ -45,6 +45,12 @@ namespace MyClientProject.Services
         public List<Item> GetAllItems()
         {
             return _itemRepo.GetAll();
+        }
+
+        public async Task<bool> CreateAsync(Item item)
+        {
+            await _itemRepo.CreateAsync(item);
+            return true;
         }
     }
 }

@@ -8,7 +8,7 @@
 
 <h2>Bestelling geplaatst op </h2>
 
-@if (@Model != null && @Model.Any())
+@if (@Model != null && @Model.Any() && user!=null)
 {
     <h4>Totaalprijs:</h4>
 
@@ -18,7 +18,22 @@
             <li style="list-style: none; border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 250px;">
                 <h5>@item.Name</h5>
                 <p><strong>Categorie:</strong> @item.Category</p>
-                <p><strong>Prijs:</strong> € @item.Price.ToString("C")</p>
+                <p>
+                    <strong>Prijs:</strong>  @if (user.Discount > 0)
+                    {
+                        <span style="color: red; text-decoration: line-through;">
+                            @item.Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))
+                        </span>
+                        <span>
+                            @((item.Price - (item.Price * user.Discount / 100))
+                                .ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL")))
+                        </span>
+                    }
+                    else
+                    {
+                        @item.Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))
+                    }
+                </p>
                 <p><strong>Gewicht:</strong> @item.Weight kg</p>
                 <p><strong>Levertijd:</strong> @item.DeliveryDays dagen</p>
                 <p><strong>Beschrijving:</strong> @item.Description</p>

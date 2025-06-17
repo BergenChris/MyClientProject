@@ -5,6 +5,7 @@ using MyClientProject.Repos;
 using System.Diagnostics;
 using System.Text.Json;
 using MyClientProject.Services.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 using MyClientProject.Services;
 
 namespace MyClientProject.Controllers
@@ -12,6 +13,7 @@ namespace MyClientProject.Controllers
     public class HomeController : Controller
     {
         private readonly IUserService _users;
+        private User _user;
         private readonly ISeedService _seedService;
 
         public HomeController(IUserService _users, ISeedService seedService)
@@ -19,13 +21,28 @@ namespace MyClientProject.Controllers
             this._users=_users;
             this._seedService = seedService;
         }
+
+        private async Task<User> User()
+        {
+            var klantJson = HttpContext.Session.GetString("User");
+  
+            if (!string.IsNullOrEmpty(klantJson))
+            {
+                _user = JsonSerializer.Deserialize<User>(klantJson);
+                if (_user.ShoppingList.IsNullOrEmpty())
+                {
+                    _user.ShoppingList = new List<int>();
+                }
+            }
+            return _user;
+        }
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult Inloggen(User user)
         {
             if (string.IsNullOrWhiteSpace(user.Name) || string.IsNullOrWhiteSpace(user.UserEmail))
@@ -49,15 +66,53 @@ namespace MyClientProject.Controllers
             }
             else
             {
-                // Not found: treat as guest
-                user.Role = "Guest";
-                var guestJson = JsonSerializer.Serialize(user);
-                HttpContext.Session.SetString("User", guestJson);
+                Guest();
             }
 
-            return RedirectToAction("Index", "User");
+            return RedirectToAction("Index", "Shop");
+        }
+        [HttpGet]
+        public IActionResult Guest()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateGuest(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var klantJson = JsonSerializer.Serialize(user);
+                HttpContext.Session.SetString("User", klantJson);
+                return RedirectToAction("Index","Shop");
+            }
+            else
+            {
+                return View("Guest");
+            }
         }
 
+
+        [HttpGet]
+        public IActionResult Account()
+        {
+            return View("CreateAccount");
+        
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateAccount(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                await _users.CreateUserAsync(user);  // await here!
+
+                return RedirectToAction("Inloggen", user);
+            }
+            else
+            {
+                return View("CreateAccount", user);
+            }
+        }
 
         [HttpPost]
         public IActionResult Logout()

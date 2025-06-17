@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Past Orders";
+    var user = ViewBag.User as User;
 }
 
 <h2>Past Orders</h2>
@@ -31,7 +32,7 @@ else
                     <td>@(order.Items?.Count ?? 0)</td>
                     <td>€ @order.TotalPrice</td>
                     <td>
-                        <a asp-controller="User" asp-action="OrderDetails" asp-route-Id="@order.OrderId" class="btn btn-primary btn-sm">Details</a>
+                        <a asp-controller="User" asp-action="OrderDetails" asp-route-orderId="@order.OrderId" class="btn btn-primary btn-sm">Details</a>
                     </td>
                 </tr>
             }

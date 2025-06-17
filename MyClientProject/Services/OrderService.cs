@@ -40,7 +40,8 @@ namespace MyClientProject.Services
             {
                 UserId = user.UserId,
                 Items = items,
-                TotalPrice = totalPrice * (100 - user.Discount) / 100
+                TotalPrice = totalPrice * (100 - user.Discount) / 100,
+                UserEmail = user.UserEmail
 
             };
 
