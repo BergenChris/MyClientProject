@@ -1,9 +1,33 @@
+STAP 1 
+
+Database Configuratie
+    Connection string instellen
+        Open het bestand appsettings.json of App.config / Web.config.
+        Pas de connection string aan met jouw lokale gegevens:
+        "ConnectionStrings": {
+              "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=MijnDatabase;Trusted_Connection=True;"
+                    }
+Database aanmaken via migratie
+    Open Je project in Visual Studio.
+    Ga naar Tools > NuGet Package Manager > Package Manager Console.
+    Voer het volgende commando uit:
+        Update-Database       
+
+STAP 2 
+
+Run het project en druk op de gele knop "Reset DB en voer dummiedata opnieuw toe"
+Nu kan je mijn project verkennen.
+
+
+Opbouw en logica
+-----------------
+
 Projectbeschrijving – Online Winkel in .NET
 Voor dit project heb ik een online winkel ontwikkeld met behulp van het .NET-framework. Het platform stelt gebruikers in staat om producten te bekijken, bestellingen te plaatsen en hun aankopen te beheren. De applicatie ondersteunt meerdere soorten gebruikersaccounts, elk met hun eigen rechten en functionaliteiten:
 
 Gebruikerstypes (elk type heeft een andere korting)
 Gast
-Gasten kunnen het aanbod van de winkel bekijken, maar hebben beperkte toegang. Ze kunnen bestellingen plaatsen, maar hebben geen profiel om deze erna terug te zien.
+Gasten kunnen het aanbod van de winkel bekijken, maar hebben beperkte toegang. Ze kunnen bestellingen plaatsen, maar hebben geen profiel om deze erna terug te zien. ze geven wel naam en email-adres in voor opslag bestelling(DB) en persoonlijke begroeting (website)
 
 Klant
 Geregistreerde klanten genieten van volledige functionaliteit. Ze kunnen producten aan hun winkelmandje toevoegen, bestellingen plaatsen en hun bestelgeschiedenis bekijken.
