@@ -44,20 +44,32 @@ namespace MyClientProject.Controllers
         private async Task<User> GetUserAsync()
         {
             User();
-            var userId = _user.UserId;
-            if (userId == null)
-                return null;
+            if (_user.Role == "Guest")
+            {
+                return _user;
+            }
+            else
+            {
+                var userId = _user.UserId;
+                if (userId == null)
+                    return null;
 
-            return await _users.GetUserByIdAsync(userId);
+                return await _users.GetUserByIdAsync(userId);
+            }
+            
         }
 
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            User user = await GetUserAsync(); // Load from DB
+            var user = await GetUserAsync();
 
             bool isGuest = false;
+            if (user.Role == "Guest")
+            {
+                isGuest = true;
+            }
             if (user == null)
             {
                 // Try load from session for guest user
@@ -128,6 +140,10 @@ namespace MyClientProject.Controllers
             var user = await GetUserAsync();
 
             bool isGuest = false;
+            if (user.Role == "Guest")
+            {
+                isGuest = true;
+            }
 
             // If user not found in DB, try to get from session (guest user)
             if (user == null)
@@ -185,31 +201,44 @@ namespace MyClientProject.Controllers
         public async Task<IActionResult> DeleteItem(int itemId)
         {
             var user = await GetUserAsync();
+
+            bool isGuest = false;
+            if (user.Role == "Guest")
+            {
+                isGuest = true;
+            }
             if (user == null)
             {
                 return NotFound();
             }
 
-            // Initialize shopping list if null
-            if (user.ShoppingList == null || !user.ShoppingList.Any())
-            {
-                user.ShoppingList = new List<int>();
-            }
 
             var item = await _items.GetAsync(itemId); // Assuming GetAsync is async
             if (item == null)
             {
                 return NotFound();
             }
-            // Add item ID to shopping list
-            user.ShoppingList.Remove(item.ItemId);
+
+
+            if (user.ShoppingList.Contains(item.ItemId))
+            {
+                user.ShoppingList.Remove(item.ItemId);
+            }
+                
             // Decrement stock quantity
             item.StockQuantity++;
-            // Update item in repository
-            await _items.UpdateItemAsync(item.ItemId, item);
-            await _users.UpdateUserAsync(user);
-            // Save changes to user
-            await _users.SaveChangesAsync();
+            if (!isGuest)
+            {
+                // For logged-in users, update and persist user in DB
+                await _users.UpdateUserAsync(user);
+                await _users.SaveChangesAsync();
+            }
+            else
+            {
+                // For guests, update user in session only
+                var updatedJson = JsonSerializer.Serialize(user);
+                HttpContext.Session.SetString("User", updatedJson);
+            }
 
 
             return RedirectToAction("Index");
@@ -221,6 +250,10 @@ namespace MyClientProject.Controllers
             var user = await GetUserAsync();
 
             bool isGuest = false;
+            if (user.Role == "Guest")
+            {
+                isGuest = true;
+            }
             if (user == null)
             {
                 // Try get user from session (guest)

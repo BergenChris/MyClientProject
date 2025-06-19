@@ -12,7 +12,7 @@ using MyClientProject.Data;
 namespace MyClientProject.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20250619122216_InitialCreate")]
+    [Migration("20250619132803_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

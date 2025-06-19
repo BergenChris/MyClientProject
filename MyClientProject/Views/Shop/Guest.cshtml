@@ -5,7 +5,7 @@
     var items = ViewBag.Items as IEnumerable<MyClientProject.Models.Item>;
 }
 
-<h1>U bent ingelogd als gast, je kan producten kopen maar je krijgt geen overzicht, wil je toch account aanmaken? <a asp-controller="Home" asp-action="Account" class="btn btn-secondary" style="text-decoration: underline;"> klik hier </a></h1><
+<h1>U bent ingelogd als gast, je kan producten kopen maar je krijgt geen overzicht, wil je toch account aanmaken? <a asp-controller="Home" asp-action="Account" class="btn btn-secondary" style="text-decoration: underline;"> klik hier </a></h1>
 <h3>Kies een product @Model.Name met korting @Model.Discount %</h3>
 @if (items != null && items.Any())
 {
