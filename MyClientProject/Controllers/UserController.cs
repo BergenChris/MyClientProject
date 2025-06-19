@@ -181,7 +181,7 @@ namespace MyClientProject.Controllers
 
             return RedirectToAction("Index");
         }
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> DeleteItem(int itemId)
         {
             var user = await GetUserAsync();

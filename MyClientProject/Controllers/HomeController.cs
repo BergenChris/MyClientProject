@@ -114,7 +114,7 @@ namespace MyClientProject.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult Logout()
         {
             // Clear all session data

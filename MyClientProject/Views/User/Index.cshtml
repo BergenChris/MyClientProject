@@ -29,7 +29,7 @@
             var totaal = 1; // If needed for other calculations
 
             <li style="list-style-type: none; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 250px;">
-                <form asp-controller="Shop" asp-action="DeleteItem" method="post" class="d-inline">
+                
                     <input type="hidden" name="itemId" value="@item.ItemId" />
 
                     <h5>@item.Name</h5>
@@ -56,8 +56,8 @@
                     <p><strong>Beschrijving:</strong> @item.Description</p>
                     <p><strong>Aantal:</strong> @group.Quantity stuks</p>
 
-                    <button type="submit" class="btn btn-outline-primary">Verwijder</button>
-                </form>
+                <a asp-controller="User" asp-action="DeleteItem" asp-route-itemId="@item.ItemId" class="btn btn-secondary btn-sm" style="margin-left: 10px;">Verwijder</a>
+                
             </li>
         }
     </ul>
