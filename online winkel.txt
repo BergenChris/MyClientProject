@@ -8,8 +8,18 @@ Gasten kunnen het aanbod van de winkel bekijken, maar hebben beperkte toegang. Z
 Klant
 Geregistreerde klanten genieten van volledige functionaliteit. Ze kunnen producten aan hun winkelmandje toevoegen, bestellingen plaatsen en hun bestelgeschiedenis bekijken.
 
+    BVB:     
+    "Name": "Anna Baker",
+    "UserEmail": "Annabaker@app.be",
+
+    "Name": "Thomas Lambert",
+    "UserEmail": "ThomasLambert@app.be", (heeft reeds item in zijn bestelmandje)
+
 Werknemer
 Werknemers hebben toegang tot een beheerdersgedeelte waar ze producten kunnen toevoegen, bewerken of verwijderen. Ze kunnen ook zelf bestellingen doen.
+
+    BVB:  "Name": "Laura Spencer",
+          "UserEmail": "LauraSpencer@shop.be",    
 
 Functionaliteiten
 Authenticatie en autorisatie:
