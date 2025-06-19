@@ -11,7 +11,7 @@ Database aanmaken via migratie
     Open Je project in Visual Studio.
     Ga naar Tools > NuGet Package Manager > Package Manager Console.
     Voer het volgende commando uit:
-        Update-Database       
+        update-database -context shopdbcontext
 
 STAP 2 
 

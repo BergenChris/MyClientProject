@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\berge\\Desktop\\MyClientProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Migrations\\20250617140902_allDone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyClientProject\\Migrations\\20250617140902_allDone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\migrations\\20250619122216_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\migrations\\20250619122216_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|solutionrelative:myclientproject\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{530CD06A-FE7E-47AA-A319-16AA17B80C75}|MyClientProject\\MyClientProject.csproj|c:\\users\\berge\\desktop\\myclientproject\\myclientproject\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Services\\OrderService.cs",
@@ -63,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Controllers\\UserController.cs",
@@ -71,12 +75,11 @@
               "RelativeToolTip": "MyClientProject\\Controllers\\UserController.cs",
               "ViewState": "AgIAAPoAAAAAAAAAAAAuwBcBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T14:06:52.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T14:06:52.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Controllers\\ShopController.cs",
@@ -84,12 +87,11 @@
               "RelativeToolTip": "MyClientProject\\Controllers\\ShopController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T14:06:43.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T14:06:43.099Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Models\\User.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Models\\User.cs",
@@ -97,12 +99,11 @@
               "RelativeToolTip": "MyClientProject\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T14:06:22.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T14:06:22.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Models\\Order.cs",
               "RelativeDocumentMoniker": "MyClientProject\\Models\\Order.cs",
@@ -110,12 +111,11 @@
               "RelativeToolTip": "MyClientProject\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T14:06:00.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T14:06:00.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "MyClientProject\\Views\\User\\Index.cshtml",
@@ -123,14 +123,13 @@
               "RelativeToolTip": "MyClientProject\\Views\\User\\Index.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAADsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T14:02:12.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T14:02:12.511Z"
             }
           ]
         },
         {
           "DockedWidth": 115,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,15 +141,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250617140902_allDone.cs",
-              "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Migrations\\20250617140902_allDone.cs",
-              "RelativeDocumentMoniker": "MyClientProject\\Migrations\\20250617140902_allDone.cs",
-              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Migrations\\20250617140902_allDone.cs",
-              "RelativeToolTip": "MyClientProject\\Migrations\\20250617140902_allDone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ShopDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Data\\ShopDbContext.cs",
+              "RelativeDocumentMoniker": "MyClientProject\\Data\\ShopDbContext.cs",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Data\\ShopDbContext.cs",
+              "RelativeToolTip": "MyClientProject\\Data\\ShopDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T14:09:02.469Z",
+              "WhenOpened": "2025-06-19T12:23:32.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250619122216_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Migrations\\20250619122216_InitialCreate.cs",
+              "RelativeDocumentMoniker": "MyClientProject\\Migrations\\20250619122216_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\berge\\Desktop\\MyClientProject\\MyClientProject\\Migrations\\20250619122216_InitialCreate.cs",
+              "RelativeToolTip": "MyClientProject\\Migrations\\20250619122216_InitialCreate.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T12:22:16.732Z",
               "EditorCaption": ""
             },
             {
